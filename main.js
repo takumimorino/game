@@ -115,7 +115,7 @@ ctx.fillStyle  = 'skyblue';
 
 // スタート画面描写
 function drawstart() {
-    ctx.fillText('誰がJoker持ってるの？', 50, 50);
+    ctx.fillText('３人用ゲーム', 50, 50);
 }
 drawstart();
 
@@ -124,7 +124,7 @@ drawstart();
 start.addEventListener('click', () => {
     console.log('ok');
     ctx.clearRect(0, 0, 800, 500);
-    ctx.fillText('三人の名前をおしえてね', 50, 50);
+    ctx.fillText('名前の入力', 50, 50);
     div.removeChild(start);
     div.appendChild(name1);
     div.appendChild(name2);
@@ -139,7 +139,7 @@ ok.addEventListener('click', ()=> {
     ctx.fillText(name1.value + 'さん', 50, 50);
     ctx.fillText(name2.value + 'さん', 50, 150);
     ctx.fillText(name3.value + 'さん', 50, 250);
-    ctx.fillText('心の準備はできた？', 50, 350);
+    ctx.fillText('開始する', 50, 350);
     div.removeChild(ok);
     div.removeChild(name1);
     div.removeChild(name2);
