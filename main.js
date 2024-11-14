@@ -136,9 +136,9 @@ start.addEventListener('click', () => {
 // 名前取得
 ok.addEventListener('click', ()=> {
     ctx.clearRect(0, 0, 800, 500);
-    ctx.fillText(name1.value + 'さん', 50, 50);
-    ctx.fillText(name2.value + 'さん', 50, 150);
-    ctx.fillText(name3.value + 'さん', 50, 250);
+    ctx.fillText(name1.value, 50, 50);
+    ctx.fillText(name2.value, 50, 150);
+    ctx.fillText(name3.value, 50, 250);
     ctx.fillText('開始する', 50, 350);
     div.removeChild(ok);
     div.removeChild(name1);
@@ -153,26 +153,26 @@ function whoseTurn() {              //本人確認と話し合い開始
     ctx.clearRect(0, 0, 800, 500);
     switch( i ) {
         case 0:
-            ctx.fillText(name1.value + 'さんの番です', 50, 50);
+            ctx.fillText(name1.value + 'の番です', 50, 50);
             break;
         case 1:
-            ctx.fillText(name2.value + 'さんの番です', 50, 50);
+            ctx.fillText(name2.value + 'の番です', 50, 50);
             break;
         case 2:
-            ctx.fillText(name3.value + 'さんの番です', 50, 50);
+            ctx.fillText(name3.value + 'の番です', 50, 50);
             break;
         case 3:
             ctx.fillText('誰がJokerか', 50, 50);
             ctx.fillText('話し合ってください', 50, 150);
             break;
         case 4:
-            ctx.fillText( name1.value + 'さんの投票です', 50, 150);
+            ctx.fillText( name1.value + 'の投票です', 50, 150);
             div.appendChild(judge2);
             div.appendChild(judge3);
             j = 1;
             break;
         case 5:
-            ctx.fillText(name2.value + 'さんの投票です', 50, 150);
+            ctx.fillText(name2.value + 'の投票です', 50, 150);
             div.removeChild(judge2);
             div.removeChild(judge3);
             div.appendChild(judge1);
@@ -180,7 +180,7 @@ function whoseTurn() {              //本人確認と話し合い開始
             j = 2;
             break;
         case 6:
-            ctx.fillText(name3.value + 'さんの投票です', 50, 150);
+            ctx.fillText(name3.value + 'の投票です', 50, 150);
             div.removeChild(judge1);
             div.removeChild(judge3);
             div.appendChild(judge1);
@@ -239,9 +239,9 @@ checked.addEventListener('click', () => {
 
 
 end.addEventListener('click', () => {
-    judge1.textContent = name1.value + 'さんに投票する';
-    judge2.textContent = name2.value + 'さんに投票する';
-    judge3.textContent = name3.value + 'さんに投票する';
+    judge1.textContent = name1.value + 'に投票する';
+    judge2.textContent = name2.value + 'に投票する';
+    judge3.textContent = name3.value + 'に投票する';
     whoseTurn();
     div.removeChild(end);
 });
@@ -440,9 +440,9 @@ function makeTable() {   //順位確定、順位入りの表を作成
     ctx.fillText('3rd', 10, 10 + canvas.height * 2 / 3, canvas.width / 3);
 
 //名前を描画
-    ctx.fillText(name1.value + 'さん', canvas.width / 2 + 10, canvas.height / 3 * rank1, canvas.width / 2 - 20);
-    ctx.fillText(name2.value + 'さん', canvas.width / 2 + 10, canvas.height / 3 * rank2, canvas.width / 2 - 20);
-    ctx.fillText(name3.value + 'さん', canvas.width / 2 + 10, canvas.height / 3 * rank3, canvas.width / 2 - 20);
+    ctx.fillText(name1.value, canvas.width / 2 + 10, canvas.height / 3 * rank1, canvas.width / 2 - 20);
+    ctx.fillText(name2.value, canvas.width / 2 + 10, canvas.height / 3 * rank2, canvas.width / 2 - 20);
+    ctx.fillText(name3.value, canvas.width / 2 + 10, canvas.height / 3 * rank3, canvas.width / 2 - 20);
 }
 
 
